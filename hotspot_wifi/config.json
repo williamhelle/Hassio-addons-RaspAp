@@ -1,7 +1,7 @@
 {
     "name": "RaspAp v2.8.4 DEV | Hotspot wifi pour RPI",
     "version": "2.8.4",
-    "slug": "hotspot_wifi", 
+    "slug": "raspap", 
     "description": "RaspAp Addon for Home Assistant & Hotspot wifi with raspap-webgui | v2.8.4",
     "url": "https://github.com/williamhelle/Hassio-addons-RaspAp/",
     "webui": "[PROTO:ssl]://[HOST]:[PORT:80]",
