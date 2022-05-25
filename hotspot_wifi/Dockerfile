@@ -35,7 +35,7 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="ArminasTV <arminas.stream@gmail.com> Williamhelle <williamhelle@icloud.com>" \
+    maintainer="ArminasTV <arminas.stream@gmail.com>" \
     org.label-schema.description="hotspot_wifi" \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="hotspot_wifi" \
