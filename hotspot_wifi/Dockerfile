@@ -44,5 +44,5 @@ LABEL \
     org.label-schema.usage="https://github.com/williamhelle/Hassio-addons-RaspAp/tree/master/hotspot_wifi/tree/master/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
     org.label-schema.vcs-url="https://github.com/williamhelle/Hassio-addons-RaspAp/tree/master/hotspot_wifi" \
-    org.label-schema.vendor="ArminasTV & Williamhelle"
+    org.label-schema.vendor="ArminasTV"
 
