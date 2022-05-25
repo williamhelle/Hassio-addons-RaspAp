@@ -1,5 +1,5 @@
 {
-    "name": "RaspAp v2.8.4 | Hotspot wifi pour RPI v2",
+    "name": "RaspAp v2.8.4 DEV | Hotspot wifi pour RPI",
     "version": "2.8.4",
     "slug": "hotspot_wifi", 
     "description": "RaspAp Addon for Home Assistant & Hotspot wifi with raspap-webgui | v2.8.4",
@@ -9,7 +9,7 @@
     "arch": ["armv7"],
     "map": ["config:rw"],
     "ports": { 
-      "80/tcp": 80
+      "80/tcp": 8005
     },
     "ports_description": { 
       "80/tcp": "Web interface" 
