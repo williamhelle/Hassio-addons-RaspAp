@@ -1,3 +1,6 @@
+**POUR LES CONFIGURATIONS, INSTALLEZ AUSSI L'ADDON OBSOLETE de [ArminasTV (RaspAP)](https://github.com/ArminasTV/Hassio-addons/) CAR CETTE VERSION N'ARRIVE PAS A CHARGER LES AUTRES PAGES RaspAP**.
+Merci et dsl j'ai pas réussi a comprendre pk.
+
 # Hostpot wifi pour Raspberry avec RaspAP
 Welcome to the update RaspAP Addon for Home Assistant (May be some time to update it again) 
 **THIS IS NOT THE OFFICIAL** 
