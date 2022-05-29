@@ -12,7 +12,7 @@ RUN apt-get install -y git iptables iproute2 iw wpasupplicant net-tools
 RUN apt-get install -y hostapd qrencode dnsmasq lighttpd vnstat
 RUN apt-get install -y dhcpcd5
 RUN apt-get install -y php7.3-cgi
-RUN apt-get install -y echo
+RUN apt-get install echo
 
 RUN rm -Rf /var/www/html
 RUN git clone --branch 2.8.4 https://github.com/RaspAP/raspap-webgui /var/www/html 
