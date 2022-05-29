@@ -1,0 +1,29 @@
+{
+    "name": "Mycroft AI v1.0.0 DEV | Mycroft AI pour HA",
+    "version": "1.0.0",
+    "slug": "mycroft-ai", 
+    "description": "Mycroft AI Addon for Home Assistant | v1.0.0",
+    "url": "https://github.com/williamhelle/Hassio-addons-RaspAp/",
+    "webui": "[PROTO:ssl]://[HOST]:[PORT:80]",
+    "startup": "application",
+    "arch": ["armv7"],
+    "map": ["config:rw"],
+    "ports": { 
+      "80/tcp": 80
+    },
+    "ports_description": { 
+      "80/tcp": "Web interface" 
+    },
+    "boot": "manual",
+    "host_network": true,
+    "hassio_api": true,
+    "hassio_role": "default",
+    "auth_api": true, 
+    "privileged": ["NET_ADMIN"], 
+	"full_access": true,
+ 
+    "options": { 
+    },
+    "schema": { 
+    }
+  }

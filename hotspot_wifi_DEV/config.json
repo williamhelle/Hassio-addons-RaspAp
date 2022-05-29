@@ -1,0 +1,29 @@
+{
+    "name": "RaspAp v2.8.4 DEV | Hotspot wifi pour RPI",
+    "version": "2.8.4",
+    "slug": "raspap", 
+    "description": "RaspAp Addon for Home Assistant & Hotspot wifi with raspap-webgui | v2.8.4",
+    "url": "https://github.com/williamhelle/Hassio-addons-RaspAp/",
+    "webui": "[PROTO:ssl]://[HOST]:[PORT:80]",
+    "startup": "application",
+    "arch": ["armv7"],
+    "map": ["config:rw"],
+    "ports": { 
+      "80/tcp": 8005
+    },
+    "ports_description": { 
+      "80/tcp": "Web interface" 
+    },
+    "boot": "manual",
+    "host_network": true,
+    "hassio_api": true,
+    "hassio_role": "default",
+    "auth_api": true, 
+    "privileged": ["NET_ADMIN"], 
+	"full_access": true,
+ 
+    "options": { 
+    },
+    "schema": { 
+    }
+  }
