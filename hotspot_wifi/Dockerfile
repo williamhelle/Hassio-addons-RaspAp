@@ -3,6 +3,9 @@ ARG BUILD_FROM
 FROM ${BUILD_FROM}
 
 
+# Set shell
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 RUN apt-get update
 RUN apt-get install -y software-properties-common 
 RUN add-apt-repository ppa:ondrej/php
@@ -26,7 +29,7 @@ RUN ln -s /etc/lighttpd/conf-available/50-raspap-router.conf /etc/lighttpd/conf-
 RUN echo "net.ipv4.ip_forward=1" | tee /etc/sysctl.d/90_raspap.conf > /dev/null
 RUN sysctl -p /etc/sysctl.d/90_raspap.conf
 RUN /etc/init.d/procps restart
-RUN iptables -t nat -A POSTROUTING -j MASQUERADE
+# RUN iptables -t nat -A POSTROUTING -j MASQUERADE
 RUN iptables -t nat -A POSTROUTING -s 192.168.50.0/24 ! -d 192.168.50.0/24 -j MASQUERADE
 RUN iptables-save | tee /etc/iptables/rules.v4
 
