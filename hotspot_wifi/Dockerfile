@@ -25,13 +25,13 @@ RUN ln -s /etc/lighttpd/conf-available/50-raspap-router.conf /etc/lighttpd/conf-
 
 # Test Iptables
 
-RUN echo "net.ipv4.ip_forward=1" | sudo tee /etc/sysctl.d/90_raspap.conf > /dev/null
-RUN sudo sysctl -p /etc/sysctl.d/90_raspap.conf
-RUN sudo /etc/init.d/procps restart
+RUN echo "net.ipv4.ip_forward=1" | tee /etc/sysctl.d/90_raspap.conf > /dev/null
+RUN sysctl -p /etc/sysctl.d/90_raspap.conf
+RUN /etc/init.d/procps restart
 RUN apt-get install -y iptables
 RUN iptables -t nat -A POSTROUTING -j MASQUERADE
 RUN iptables -t nat -A POSTROUTING -s 192.168.50.0/24 ! -d 192.168.50.0/24 -j MASQUERADE
-RUN iptables-save | sudo tee /etc/iptables/rules.v4
+RUN iptables-save | tee /etc/iptables/rules.v4
 
 # Build arguments
 ARG BUILD_ARCH
