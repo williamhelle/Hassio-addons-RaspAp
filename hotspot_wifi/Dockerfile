@@ -2,8 +2,6 @@ ARG BUILD_FROM
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
-# Set shell
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apt-get update
 RUN apt-get install -y software-properties-common 
@@ -12,6 +10,7 @@ RUN apt-get install -y git iptables iproute2 iw wpasupplicant net-tools
 RUN apt-get install -y hostapd qrencode dnsmasq lighttpd vnstat
 RUN apt-get install -y dhcpcd5
 RUN apt-get install -y php7.3-cgi
+RUN apt-get install -y iptables
 
 RUN rm -Rf /var/www/html
 RUN git clone --branch 2.8.4 https://github.com/RaspAP/raspap-webgui /var/www/html 
@@ -27,7 +26,6 @@ RUN ln -s /etc/lighttpd/conf-available/50-raspap-router.conf /etc/lighttpd/conf-
 RUN echo "net.ipv4.ip_forward=1" | tee /etc/sysctl.d/90_raspap.conf > /dev/null
 RUN sysctl -p /etc/sysctl.d/90_raspap.conf
 RUN /etc/init.d/procps restart
-RUN apt-get install -y iptables
 RUN iptables -t nat -A POSTROUTING -j MASQUERADE
 RUN iptables -t nat -A POSTROUTING -s 192.168.50.0/24 ! -d 192.168.50.0/24 -j MASQUERADE
 RUN iptables-save | tee /etc/iptables/rules.v4
