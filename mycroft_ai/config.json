@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "slug": "mycroft-ai", 
     "description": "Mycroft AI Addon for Home Assistant | v1.0.0",
-    "url": "https://github.com/williamhelle/Hassio-addons-RaspAp/",
+    "url": "https://github.com/williamhelle/Hassio-addons-RaspAp/tree/master/mycroft_ai",
     "webui": "[PROTO:ssl]://[HOST]:[PORT:80]",
     "startup": "application",
     "arch": ["armv7"],
