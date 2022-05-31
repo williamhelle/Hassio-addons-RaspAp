@@ -1,0 +1,29 @@
+{
+    "name": "pypi v1.0.0 DEV | Python pip for HA",
+    "version": "1.0.0",
+    "slug": "pypi", 
+    "description": "Python pip Addon for Home Assistant | v1.0.0",
+    "url": "https://github.com/williamhelle/Hassio-addons-RaspAp/tree/master/pipy_dev",
+    "webui": "[PROTO:ssl]://[HOST]:[PORT:80]",
+    "startup": "application",
+    "arch": ["armv7"],
+    "map": ["config:rw"],
+    "ports": { 
+      "80/tcp": 8006
+    },
+    "ports_description": { 
+      "80/tcp": "Web interface" 
+    },
+    "boot": "manual",
+    "host_network": true,
+    "hassio_api": true,
+    "hassio_role": "default",
+    "auth_api": true, 
+    "privileged": ["NET_ADMIN"], 
+	"full_access": true,
+ 
+    "options": { 
+    },
+    "schema": { 
+    }
+  }
