@@ -1,3 +1,7 @@
+
+https://docs.mopidy.com/en/latest/installation/pypi/#installing-extensions
+
+
 **POUR LES CONFIGURATIONS, INSTALLEZ AUSSI L'ADDON OBSOLETE de [ArminasTV (RaspAP)](https://github.com/ArminasTV/Hassio-addons/) CAR CETTE VERSION N'ARRIVE PAS A CHARGER LES AUTRES PAGES RaspAP**.
 Merci et dsl j'ai pas réussi a comprendre pk.
 
